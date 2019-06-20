@@ -1,0 +1,45 @@
+print("CONTACT")
+print("do you want to 1.add a contact 2.delete a contact")
+choice=int(input())
+print("do you want to continue    yes or no")
+ans=input()
+my_dict = dict()
+while(1):
+    if(choice==1):
+        while ans=="yes":
+            user_input = input("enter new contact name and number: ")
+            key, value = user_input.split(",")
+            my_dict[key] = value
+            if(len(value)!=10):
+                print("invalid number")
+            else:
+                print(my_dict)
+                print("do you want to add more contact    yes or no")
+                ans=input()
+                if(ans=="no"):
+                    print("do you want to  \n 2.delete a contact  \n 3.update  \n4.search ")
+                    choose=int(input())
+    if(choose==2):               
+        delete = input("enter a contact person which you want to delete: ")
+        if delete in my_dict:
+            del my_dict[delete]
+        else:
+            print("no name is matched")
+            print(my_dict)
+    if(choose==3): 
+        user_update_input = input("enter new contact name and number: ")
+        name, number = user_update_input.split(",")
+        my_dict[key] = number
+        if(len(number)!=10):
+            print("invalid number")
+        else:
+            if name in my_dict:
+                          my_dict.update({name:number})
+                          print(my_dict)
+                    if(choose==4):
+                        search = input("enter contact name which you want to search: ")
+                        if my_dict[search]:
+                          print('search key found')
+                          print(my_dict)
+                        else:
+                          print("no such name is found")
