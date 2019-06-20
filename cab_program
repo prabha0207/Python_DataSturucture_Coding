@@ -1,0 +1,38 @@
+cabname=['ola','uber','red taxi','fast track']
+print("1:ola  2:uber  3:red taxi   4:fast track")
+cabno=int(input("enter the cab no"))
+if(cabno==1):
+  print("you have choosed",cabname[0])
+elif(cabno==2):
+  print("you have choosed",cabname[1])
+elif(cabno==3):
+  print("you have choosed",cabname[2])
+elif(cabno==4):
+  print("you have choosed",cabname[3])
+elif(cabno==0):
+  print("you have not choosed any cab")
+c=coimbatore=0
+p=pollachi=40
+k=kinathukadavu=20
+m=metupalyam=80
+if(cabno==1):
+  sp=input("enter the starting point:")
+  ep=input("enter the ending point:")
+  if(sp==ep):
+    #print("your starting point is coimbatore")
+    #print("your ending point is coimbatore")
+    print("your amount is 0")
+  elif(sp==c and ep==p):
+    #print("your starting point is coimbatore")
+    #print("your ending point is pollachi")
+    print("your amount is 70")
+  elif(ep==kinathukadavu):
+    #print("your starting point is coimbatore")
+    #print("your ending point is kinathukadavu")
+    print("your amount is 30")
+  elif(ep==metupalyam):
+    #print("your starting point is coimbatore")
+    #print("your ending point is metupalyam")
+    print("your amount is 150")
+else:
+  print("enter cabno")
