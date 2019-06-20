@@ -1,0 +1,110 @@
+def insert_at_begning(list,value):
+    list.insert(0,value)
+def insert_at_end(list,value):
+    list.append(2,value)
+def insert_at_anypos(list,value,position):
+    list.insert(position-1,value)
+def dele_at_begning(list):
+    list.pop(0)         #del.list(0)
+def dele_at_end(list):
+    list.pop()
+def dele_at_anypos(list,position):
+    list.pop(position-1)
+def search(list,value):  # only true or false
+    if value in list:
+        return True
+    else:
+        return False
+def display(list):    #hunter 26 program
+   for data in range(0,len(list-1)):  # counter=0
+        print(list[counter],end='->')
+    list[list[counter]] #list[-1]
+
+
+def menu():
+    list=[]
+    print("1.Insert\n 2.Delete\n 3.Search\n 4.Display\n 5.Exit")
+    Choice=int(input())
+     if(Choice==1):
+         value=int(input("enter the value to insert"))
+         print("1.Insert at begning\n 2.Insert at middle\n 3.Insert at end")
+         op=int(input())
+         if(op==1):
+             insert_at_begning(list,value)
+         elif if(op=2):
+             insert_at_end(list,value)
+          elif(op==3):
+              position=int(input('enter the position to insert'))
+              insert_at_anypos(list,value,position)
+     if(Choice==2):
+         if(len(list)==0):
+             print("empty")
+         else:
+             if(op==3):
+                position=int(input('enter the position to delete'))
+                if(position<=len(list)):
+                  dele_at_anypos(list,position)
+              else:
+                  print("len")
+                  print("1.Delete at begning\n 2.Delete at middle\n 3.Delete at end")
+                  op=int(input())
+                  value=int(input("enter the value to delete"))
+                   if(op==1):
+                     dele_at_begning(list)
+                   elif(op==2):
+                     dele_at_end(list)
+                   elif(op==3):
+                       position=int(input('enter the position to delete'))
+                       dele_at_anypos(list,position
+     if(Choice==3):
+          if(len(list)==0):
+             print("empty")
+          else:
+              value=int(input("enter the value to search"))
+              if(search(list,value)):
+                  print("found in list")
+              else:
+                  print("not found in list")
+
+     if(Choice==4):
+         display(list)
+
+     if(Choice==5):
+         exit
+menu()
+    
+                  
+              
+     
+
+            
+                  
+              
+              
+                
+    
+
+
+
+
+
+
+
+
+
+"""     search()
+     if(Choice==4):
+        display()
+     if(Choice==1):
+         exit()
+        def insert():
+            menu()
+            print("1.Insert at begning\n 2.Insert at middle\n 3.Insert at end")
+            choice=input()
+            if(choice==1):
+            def insert_at_beg(0,suvi())"""
+
+                      
+         
+     
+     
