@@ -1,0 +1,75 @@
+#linked list coding in ds
+def insert_beg (lis,value):
+    lis.insert(0,value)
+def insert_end(lis,value):
+    lis.append(value)
+def insert_pos(lis,value,pos):
+    lis.insert(pos-1,value)
+def delete_beg (lis):
+    lis.pop(0)
+def delete_end(lis):
+    lis.pop()
+def delete_pos(lis,pos):
+    lis.pop(pos-1)
+def search(lis,value):
+    if value in lis:
+        return  True
+    else:
+        return False
+def display(lis):
+    for counter in range(0,len(lis)-1):
+        print(lis[counter],end="->")
+    lis[-1]
+def menu():
+    lis=[]
+    print("1.Insert 2.Delete 3.Search 4.Display 5.Exit")
+    choice=int(input())
+    if(choice==1):
+        print("1.Insert at the beginning 2.Insert at the end 3.Insert at any position")
+        option=int(input())
+        value=input("enter the value")
+        if(option==1):
+            insert_beg(lis,value)
+        elif(option==2):
+            insert_end(lis,value)
+        elif(option==3):
+            print("enter the position to insert the element")
+            pos=input()
+            insert_any(lis,value,pos)
+    if(choice==2):
+          if(len(lis)==0):
+              print("The list is empty,and you cannot delete anything from list")
+          else:
+              if(option==3):
+                  pos=int(input("enter the position to delete"))
+                  if(pos<=len(lis)):
+                      delete_any(lis,pos)
+                  else:
+                      print("length is exceeded.you can't delete it")
+          print("1.Delete at the beginning 2.Delete at the end 3.Delete at any position")
+          option=int(input())
+          value=input("enter the value")
+          if(option==1):
+            delete_beg(lis)
+          elif(option==2):
+            delete_end(lis)
+          elif(option==3):
+            print("enter the position to delete the element")
+            pos=input()
+            delete_any(lis,pos)
+    if(choice==3):
+           if(len(lis)==0):
+              print("The list is empty,and you cannot delete anything from list")
+           else:
+                value=input("enter the value to search")
+                if(search(lis,value)):
+                    print("The searching value is present in list")
+                else:
+                    print("The searching value is not present in list")
+           
+    if(choice==4):
+           display(lis)
+    if(choice==5):
+           exit 
+menu()
+\
