@@ -1,0 +1,50 @@
+def enqueue(list,value):
+    list.append(2,value)
+    
+def dequeue(list):
+    list.pop()
+    
+def search(list,value):  # only true or false
+    if value in list:
+        return True
+    else:
+        return False
+
+def display(list):    #hunter 26 program
+   for data in range(0,len(list-1)):  # counter=0
+        print(list[counter],end='->')
+    list[list[counter]] #list[-1]
+    
+
+def menu():
+    list=[]
+    print("1.enqueue\n 2.dequeuq\n 3.Search\n 4.Display\n 5.exit ")
+    Choice=int(input())
+     if(Choice==1):
+         value=int(input("push"))
+         enqueue(list,value)
+         
+     if(Choice==2):
+         if(len(list)==0):
+             print("empty")
+         else:
+             pop(list)
+            
+     if(Choice==3):
+          if(len(list)==0):
+             print("empty")
+          else:
+              value=int(input("enter the value to search"))
+              if(search(list,value)):
+                  print("found in list")
+              else:
+                  print("not found in list")
+    
+      if(Choice==4):
+          display(list)
+    
+       if(Choice==5):
+           exit
+menu()
+              
+     
