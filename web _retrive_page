@@ -1,0 +1,47 @@
+<html>
+<body>
+<h2> Forms</h2>
+<form action="http://127.0.0.1:5000/akshaya suvi 
+
+">
+  name:<input type="text" name="firstname" 
+
+value="">
+  </br>  
+  <input type="submit" value="Submit">
+</form> 
+</body>
+</html>
+
+
+
+
+
+
+///flask
+from flask import Flask, redirect, url_for
+app = Flask(__name__)
+
+@app.route('/akshaya <name>')
+def sayhi(name):
+    greeting='hai welcome to akshaya'+name
+    return greeting
+
+@app.route('/guvi <name>')
+def saywelcome():
+    greeting='welcome to GUVI'+name
+    return greeting
+
+@app.route('/user/<suffix> <uname>')
+def check(suffix,uname):
+
+    if(suffix =='akshaya'):
+        return redirect(url_for('sayhi',name=uname))
+    elif(suffix =='Guvi'):
+        return redirect(url_for('saywelcome',name=uname))
+    else:
+        return "invalid"
+if __name__ == '__main__':
+    app.debug = True
+    app.run()
+
